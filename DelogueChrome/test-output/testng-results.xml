@@ -2,50 +2,48 @@
 <testng-results skipped="2" failed="1" total="5" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="178216" started-at="2017-12-13T09:24:33Z" finished-at="2017-12-13T09:27:31Z">
+  <suite name="Default suite" duration-ms="80288" started-at="2017-12-13T10:01:54Z" finished-at="2017-12-13T10:03:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="178216" started-at="2017-12-13T09:24:33Z" finished-at="2017-12-13T09:27:31Z">
+    <test name="Default test" duration-ms="80288" started-at="2017-12-13T10:01:54Z" finished-at="2017-12-13T10:03:14Z">
       <class name="ItemTabOperations.ItemHeader">
-        <test-method status="PASS" signature="init()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="init" is-config="true" duration-ms="7245" started-at="2017-12-13T09:24:33Z" finished-at="2017-12-13T09:24:40Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="init" is-config="true" duration-ms="5837" started-at="2017-12-13T10:01:54Z" finished-at="2017-12-13T10:01:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="logIn()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="logIn" duration-ms="55374" started-at="2017-12-13T09:24:40Z" finished-at="2017-12-13T09:25:35Z">
+        <test-method status="PASS" signature="logIn()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="logIn" duration-ms="53309" started-at="2017-12-13T10:01:59Z" finished-at="2017-12-13T10:02:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="addItem()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="addItem" duration-ms="6325" started-at="2017-12-13T09:25:35Z" depends-on-methods="ItemTabOperations.ItemHeader.logIn" finished-at="2017-12-13T09:25:42Z">
+        <test-method status="PASS" signature="addItem()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="addItem" duration-ms="5886" started-at="2017-12-13T10:02:53Z" depends-on-methods="ItemTabOperations.ItemHeader.logIn" finished-at="2017-12-13T10:02:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addItem -->
-        <test-method status="FAIL" signature="editItemHeader()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="editItemHeader" duration-ms="109234" started-at="2017-12-13T09:25:42Z" depends-on-methods="ItemTabOperations.ItemHeader.addItem" finished-at="2017-12-13T09:27:31Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="editItemHeader()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="editItemHeader" duration-ms="15217" started-at="2017-12-13T10:02:59Z" depends-on-methods="ItemTabOperations.ItemHeader.addItem" finished-at="2017-12-13T10:03:14Z">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#tblEditItemInfoContainer"}
+              <![CDATA[stale element reference: element is not attached to the page document
   (Session info: chrome=63.0.3239.84)
   (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 100.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
 System info: host: 'dlgselenium', ip: '10.160.0.2', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1), userDataDir=C:\Users\shwetap\AppData\Local\Temp\2\scoped_dir3684_28397}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 29682fba74985e8adc109efdf5e81a22
-*** Element info: {Using=css selector, value=#tblEditItemInfoContainer}]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1), userDataDir=C:\Users\shwetap\AppData\Local\Temp\2\scoped_dir8124_20363}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: e6989f78ed2ea8cd9711b3dbdbba8f6d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#tblEditItemInfoContainer"}
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=63.0.3239.84)
   (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 100.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
 System info: host: 'dlgselenium', ip: '10.160.0.2', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1), userDataDir=C:\Users\shwetap\AppData\Local\Temp\2\scoped_dir3684_28397}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 29682fba74985e8adc109efdf5e81a22
-*** Element info: {Using=css selector, value=#tblEditItemInfoContainer}
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1), userDataDir=C:\Users\shwetap\AppData\Local\Temp\2\scoped_dir8124_20363}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: e6989f78ed2ea8cd9711b3dbdbba8f6d
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -53,11 +51,12 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at ItemTabOperations.ItemHeader.editItemHeader(ItemHeader.java:81)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:35)
+	at org.openqa.selenium.remote.RemoteMouse.mouseMove(RemoteMouse.java:89)
+	at org.openqa.selenium.interactions.internal.MouseAction.moveToLocation(MouseAction.java:59)
+	at org.openqa.selenium.interactions.DoubleClickAction.perform(DoubleClickAction.java:39)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+	at ItemTabOperations.ItemHeader.editItemHeader(ItemHeader.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -84,11 +83,11 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editItemHeader -->
-        <test-method status="SKIP" signature="readExcel()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="readExcel" duration-ms="0" started-at="2017-12-13T09:27:31Z" depends-on-methods="ItemTabOperations.ItemHeader.editItemHeader" finished-at="2017-12-13T09:27:31Z">
+        <test-method status="SKIP" signature="readExcel()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="readExcel" duration-ms="0" started-at="2017-12-13T10:03:14Z" depends-on-methods="ItemTabOperations.ItemHeader.editItemHeader" finished-at="2017-12-13T10:03:14Z">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method ItemHeader.readExcel()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8] depends on not successfully finished methods]]>
@@ -118,7 +117,7 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readExcel -->
-        <test-method status="SKIP" signature="exit()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="exit" duration-ms="0" started-at="2017-12-13T09:27:31Z" depends-on-methods="ItemTabOperations.ItemHeader.readExcel" finished-at="2017-12-13T09:27:31Z">
+        <test-method status="SKIP" signature="exit()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8]" name="exit" duration-ms="0" started-at="2017-12-13T10:03:14Z" depends-on-methods="ItemTabOperations.ItemHeader.readExcel" finished-at="2017-12-13T10:03:14Z">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method ItemHeader.exit()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8] depends on not successfully finished methods]]>

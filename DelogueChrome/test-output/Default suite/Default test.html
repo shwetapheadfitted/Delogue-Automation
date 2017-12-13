@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/2</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 13 09:24:33 GMT 2017</td>
+<td>Started on:</td><td>Wed Dec 13 10:01:54 GMT 2017</td>
 </tr>
-<tr><td>Total time:</td><td>178 seconds (178216 ms)</td>
+<tr><td>Total time:</td><td>80 seconds (80288 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,17 +76,16 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='ItemTabOperations.ItemHeader.editItemHeader()'><b>editItemHeader</b><br>Test class: ItemTabOperations.ItemHeader</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#tblEditItemInfoContainer&quot;}
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=63.0.3239.84)
   (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 100.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
 System info: host: &apos;dlgselenium&apos;, ip: &apos;10.160.0.2&apos;, os.name: &apos;Windows Server 2016&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1), userDataDir=C:\Users\shwetap\AppData\Local\Temp\2\scoped_dir3684_28397}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 29682fba74985e8adc109efdf5e81a22
-*** Element info: {Using=css selector, value=#tblEditItemInfoContainer}
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1), userDataDir=C:\Users\shwetap\AppData\Local\Temp\2\scoped_dir8124_20363}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: e6989f78ed2ea8cd9711b3dbdbba8f6d
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -94,11 +93,12 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at ItemTabOperations.ItemHeader.editItemHeader(ItemHeader.java:81)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:35)
+	at org.openqa.selenium.remote.RemoteMouse.mouseMove(RemoteMouse.java:89)
+	at org.openqa.selenium.interactions.internal.MouseAction.moveToLocation(MouseAction.java:59)
+	at org.openqa.selenium.interactions.DoubleClickAction.perform(DoubleClickAction.java:39)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+	at ItemTabOperations.ItemHeader.editItemHeader(ItemHeader.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -123,18 +123,17 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace477533894", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace477533894'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#tblEditItemInfoContainer&quot;}
+</pre></div><a href='#' onClick='toggleBox("stack-trace42544488", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace42544488'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=63.0.3239.84)
   (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 100.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
 System info: host: &apos;dlgselenium&apos;, ip: &apos;10.160.0.2&apos;, os.name: &apos;Windows Server 2016&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1), userDataDir=C:\Users\shwetap\AppData\Local\Temp\2\scoped_dir3684_28397}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 29682fba74985e8adc109efdf5e81a22
-*** Element info: {Using=css selector, value=#tblEditItemInfoContainer}
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1), userDataDir=C:\Users\shwetap\AppData\Local\Temp\2\scoped_dir8124_20363}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: e6989f78ed2ea8cd9711b3dbdbba8f6d
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -142,11 +141,12 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at ItemTabOperations.ItemHeader.editItemHeader(ItemHeader.java:81)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:35)
+	at org.openqa.selenium.remote.RemoteMouse.mouseMove(RemoteMouse.java:89)
+	at org.openqa.selenium.interactions.internal.MouseAction.moveToLocation(MouseAction.java:59)
+	at org.openqa.selenium.interactions.DoubleClickAction.perform(DoubleClickAction.java:39)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+	at ItemTabOperations.ItemHeader.editItemHeader(ItemHeader.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -172,7 +172,7 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>109</td>
+<td>15</td>
 <td>ItemTabOperations.ItemHeader@4c70fda8</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -185,12 +185,12 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
 <tr>
 <td title='ItemTabOperations.ItemHeader.addItem()'><b>addItem</b><br>Test class: ItemTabOperations.ItemHeader</td>
 <td></td>
-<td>6</td>
+<td>5</td>
 <td>ItemTabOperations.ItemHeader@4c70fda8</td></tr>
 <tr>
 <td title='ItemTabOperations.ItemHeader.logIn()'><b>logIn</b><br>Test class: ItemTabOperations.ItemHeader</td>
 <td></td>
-<td>55</td>
+<td>53</td>
 <td>ItemTabOperations.ItemHeader@4c70fda8</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
@@ -220,8 +220,8 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace121167003", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace121167003'><pre>java.lang.Throwable: Method ItemHeader.exit()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8] depends on not successfully finished methods
+</pre></div><a href='#' onClick='toggleBox("stack-trace1187903677", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1187903677'><pre>java.lang.Throwable: Method ItemHeader.exit()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1033)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
@@ -262,8 +262,8 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1436633036", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1436633036'><pre>java.lang.Throwable: Method ItemHeader.readExcel()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8] depends on not successfully finished methods
+</pre></div><a href='#' onClick='toggleBox("stack-trace696933920", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace696933920'><pre>java.lang.Throwable: Method ItemHeader.readExcel()[pri:0, instance:ItemTabOperations.ItemHeader@4c70fda8] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1033)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)

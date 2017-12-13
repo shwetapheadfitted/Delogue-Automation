@@ -79,9 +79,10 @@ public class ItemHeader {
 		driver.findElement(By.xpath("//span[@name='ChromeItem102']")).click();
 		action=new Actions(driver);
 		//double click to edit 
-		WebElement element=driver.findElement(By.xpath("//span[@name='btnEditItemInfo']"));
-		JavascriptExecutor exe=(JavascriptExecutor)driver;
-		exe.executeScript("arguments[0].setAttribute('style','display: block;');", element);
+		WebElement element=driver.findElement(By.xpath("//label[text()='Item no:']"));
+		//JavascriptExecutor exe=(JavascriptExecutor)driver;
+		//exe.executeScript("arguments[0].setAttribute('style','display: block;');", element);
+		//System.out.println(element.getText());
 		Thread.sleep(6000);
 		action.doubleClick(element).build().perform();
 	}

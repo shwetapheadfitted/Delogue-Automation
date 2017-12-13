@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\shwetap\AppData\Local\Temp\2\testng-eclipse--1123476899\testng-customsuite.xml</span>
+                    <span>C:\Users\shwetap\AppData\Local\Temp\2\testng-eclipse--1167688562\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -165,17 +165,16 @@
                   <a name="editItemHeader">
                   </a> <!-- editItemHeader -->
                   <span class="method-name">editItemHeader</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#tblEditItemInfoContainer&quot;}
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=63.0.3239.84)
   (Driver info: chromedriver=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 100.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Command duration or timeout: 10 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
 System info: host: &apos;dlgselenium&apos;, ip: &apos;10.160.0.2&apos;, os.name: &apos;Windows Server 2016&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1), userDataDir=C:\Users\shwetap\AppData\Local\Temp\2\scoped_dir3684_28397}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 29682fba74985e8adc109efdf5e81a22
-*** Element info: {Using=css selector, value=#tblEditItemInfoContainer}
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1), userDataDir=C:\Users\shwetap\AppData\Local\Temp\2\scoped_dir8124_20363}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.84, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: e6989f78ed2ea8cd9711b3dbdbba8f6d
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -183,11 +182,12 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at ItemTabOperations.ItemHeader.editItemHeader(ItemHeader.java:81)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:35)
+	at org.openqa.selenium.remote.RemoteMouse.mouseMove(RemoteMouse.java:89)
+	at org.openqa.selenium.interactions.internal.MouseAction.moveToLocation(MouseAction.java:59)
+	at org.openqa.selenium.interactions.DoubleClickAction.perform(DoubleClickAction.java:39)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:50)
+	at ItemTabOperations.ItemHeader.editItemHeader(ItemHeader.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -305,7 +305,7 @@ Session ID: 29682fba74985e8adc109efdf5e81a22
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shwetap\AppData\Local\Temp\2\testng-eclipse--1123476899\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\shwetap\AppData\Local\Temp\2\testng-eclipse--1167688562\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -356,17 +356,17 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'editItemHeader')
+data.setCell(0, 1, 'logIn')
 data.setCell(0, 2, 'ItemTabOperations.ItemHeader')
-data.setCell(0, 3, 109234);
+data.setCell(0, 3, 53309);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'logIn')
+data.setCell(1, 1, 'editItemHeader')
 data.setCell(1, 2, 'ItemTabOperations.ItemHeader')
-data.setCell(1, 3, 55374);
+data.setCell(1, 3, 15217);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'addItem')
 data.setCell(2, 2, 'ItemTabOperations.ItemHeader')
-data.setCell(2, 3, 6325);
+data.setCell(2, 3, 5886);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'exit')
 data.setCell(3, 2, 'ItemTabOperations.ItemHeader')
@@ -379,7 +379,7 @@ window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -412,17 +412,17 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">logIn</span>
-                <span class="method-start">7249 ms</span>
+                <span class="method-start">5840 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addItem</span>
-                <span class="method-start">62628 ms</span>
+                <span class="method-start">59163 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">editItemHeader</span>
-                <span class="method-start">68955 ms</span>
+                <span class="method-start">65051 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
