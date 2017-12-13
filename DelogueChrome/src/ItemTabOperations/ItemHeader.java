@@ -16,6 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -65,7 +66,7 @@ public class ItemHeader {
 		contactdropdown.selectByVisibleText("Balaji");
 		
 		//entering item name 
-		driver.findElement(By.cssSelector("#txtItemTabItemName")).sendKeys("ChromeItem116");
+		driver.findElement(By.cssSelector("#txtItemTabItemName")).sendKeys("ChromeItem118");
 		
 		//click on save
 		driver.findElement(By.cssSelector("span.save-icon.pull-right")).click();
@@ -79,17 +80,19 @@ public class ItemHeader {
 		driver.findElement(By.xpath("//span[@name='ChromeItem102']")).click();
 		action=new Actions(driver);
 		//double click to edit 
+		Thread.sleep(6000);
 		WebElement element=driver.findElement(By.xpath("//label[text()='Item no:']"));
 		//JavascriptExecutor exe=(JavascriptExecutor)driver;
 		//exe.executeScript("arguments[0].setAttribute('style','display: block;');", element);
 		//System.out.println(element.getText());
-		Thread.sleep(6000);
+		
 		action.doubleClick(element).build().perform();
 	}
 	@Test(dependsOnMethods= {"editItemHeader"})
 	public void readExcel() throws Exception
 	{
-		File file=new File("C:\\Users\\shwetap\\Downloads\\ItemDetails (1).xlsx");
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		File file=new File("C:\\Users\\shwetap\\Downloads\\ItemDetails (2).xlsx");
 		
 		FileInputStream is=new FileInputStream(file);
 		
@@ -103,17 +106,16 @@ public class ItemHeader {
 		String itemno=sheet.getRow(1).getCell(0).getStringCellValue();
 		
 		//item name inserted
+		Thread.sleep(4000);
 		driver.findElement(By.cssSelector("#txtItemTabItemNumber")).sendKeys(itemno);
 		
 		String itemdesc=sheet.getRow(1).getCell(1).getStringCellValue();
 		
 		//item description inserted
+		Thread.sleep(4000);
 		driver.findElement(By.cssSelector("#txtItemTabItemDescription")).sendKeys(itemdesc);
 		
-		String defaultq=sheet.getRow(1).getCell(2).getStringCellValue();
 		
-		//default quantity added
-		driver.findElement(By.cssSelector("#txtDefaultQty")).sendKeys(defaultq);
 		
 		xf.close();
 		
@@ -125,7 +127,10 @@ public class ItemHeader {
 	public void exit() throws InterruptedException
 	{
 		Thread.sleep(4000);
+		driver.findElement(By.xpath("//a[text()='Log out']")).click();
+		Thread.sleep(1000);
 		driver.close();
 	}
+	
 
 }
