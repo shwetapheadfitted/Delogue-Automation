@@ -33,11 +33,13 @@ public class VerifyTestCases {
 		
 	}
 	@Test(dependsOnMethods="checkValidUser")
-	public void verifyItemHeader() throws InterruptedException
+	public void verifyItemHeader() throws Exception
 	{
 		ItemTab itemtabobj=PageFactory.initElements(driver,ItemTab.class);
 		
-		itemtabobj.itemedit();
+		
+		itemtabobj.viewMarkedFileds();
+		itemtabobj.itemAdd();
 		
 		
 	}

@@ -1,6 +1,7 @@
 package testNgFreamework;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -9,12 +10,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import com.google.common.base.Function;
 
 public class DelogueItem {
 
@@ -34,20 +39,28 @@ public class DelogueItem {
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("shweta@123");
 		driver.findElement(By.xpath("//button[@name='submit']")).click();
 	}
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Test
 	public void addItemDetails() throws InterruptedException
 	{
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-		WebDriverWait wait;
-		//wait=new WebDriverWait(driver, 50);
-		//wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a#itemTabLink"))).click();
+		
+		Wait wait=new FluentWait(driver)
+				.withTimeout(10000, TimeUnit.MICROSECONDS).pollingEvery(50, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
+		
+		WebElement element=(WebElement) wait.until(new Function() {
+			@Override
+			public Object apply(Object arg0) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			});
+		
 	
-		WebElement element=driver.findElement(By.cssSelector("a#itemTabLink"));
 		element.click();
 
-		Thread.sleep(5000);
-		wait=new WebDriverWait(driver, 50);
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button#btnCreateItem.green-button-dark"))).click();
+		
+		/*
 		//Thread.sleep(1000);		
 		WebElement brand=driver.findElement(By.cssSelector("#selectBrand"));
 		Select branddropdown=new Select(brand);
@@ -68,7 +81,7 @@ public class DelogueItem {
 		//save button
 		driver.findElement(By.cssSelector("span.save-icon.pull-right")).click();
 		
-		
+		*/
 	}
 	
 	

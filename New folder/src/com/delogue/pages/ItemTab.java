@@ -44,7 +44,16 @@ public class ItemTab {
 	@FindBy(how=How.CSS,using="span.save-icon.pull-right")
 	WebElement savebutton;
 	
-	public void itemedit() throws InterruptedException
+	public void viewMarkedFileds() throws Exception
+	{
+		Thread.sleep(10000);
+		item.click();
+		Thread.sleep(7000);
+		additem.click();
+		
+	}
+	
+	public void itemAdd() throws InterruptedException
 	{
 		Thread.sleep(10000);
 		item.click();
