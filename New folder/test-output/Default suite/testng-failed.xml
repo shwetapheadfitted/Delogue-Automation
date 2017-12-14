@@ -6,6 +6,7 @@
       <class name="com.delogue.Testcases.VerifyLogIn">
         <methods>
           <include name="checkValidUser"/>
+          <include name="verifyItemHeader"/>
         </methods>
       </class> <!-- com.delogue.Testcases.VerifyLogIn -->
     </classes>

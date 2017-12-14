@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * @author shwetap
@@ -37,11 +38,34 @@ public class ItemTab {
 	@FindBy(how=How.CSS, using="#txtItemTabItemNumber")
 	WebElement itemnumber;
 		
-	@FindBy(how=How.CSS,using="txtItemTabItemName")
+	@FindBy(how=How.CSS,using="#txtItemTabItemName")
 	WebElement itemname;
 	
 	@FindBy(how=How.CSS,using="span.save-icon.pull-right")
 	WebElement savebutton;
+	
+	public void itemedit() throws InterruptedException
+	{
+		Thread.sleep(10000);
+		item.click();
+		Thread.sleep(9000);
+		additem.click();
+		Thread.sleep(2000);
+		
+		Select branddropdown=new Select(brand);
+		branddropdown.selectByVisibleText("brandnew");
+		
+		Select contactdropdown=new Select(contactperson);
+		contactdropdown.selectByVisibleText("Shweta");
+		
+		itemname.sendKeys("item4567");
+		
+		itemnumber.sendKeys("123");
+		
+		savebutton.click();
+		
+		
+	}
 
 		
 	
