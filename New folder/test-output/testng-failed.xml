@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.delogue.Testcases.VerifyLogIn">
+      <class name="com.delogue.Testcases.VerifyTestCases">
         <methods>
+          <include name="verifySize"/>
           <include name="checkValidUser"/>
-          <include name="verifyItemHeader"/>
         </methods>
-      </class> <!-- com.delogue.Testcases.VerifyLogIn -->
+      </class> <!-- com.delogue.Testcases.VerifyTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

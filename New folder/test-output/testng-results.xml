@@ -1,20 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="109504" started-at="2017-12-14T10:21:06Z" finished-at="2017-12-14T10:22:56Z">
+  <suite name="Default suite" duration-ms="123219" started-at="2017-12-15T09:45:38Z" finished-at="2017-12-15T09:47:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="109504" started-at="2017-12-14T10:21:06Z" finished-at="2017-12-14T10:22:56Z">
+    <test name="Default test" duration-ms="123219" started-at="2017-12-15T09:45:38Z" finished-at="2017-12-15T09:47:41Z">
       <class name="com.delogue.Testcases.VerifyTestCases">
-        <test-method status="PASS" signature="checkValidUser()[pri:0, instance:com.delogue.Testcases.VerifyTestCases@1593948d]" name="checkValidUser" duration-ms="68614" started-at="2017-12-14T10:21:06Z" finished-at="2017-12-14T10:22:15Z">
+        <test-method status="PASS" signature="checkValidUser()[pri:0, instance:com.delogue.Testcases.VerifyTestCases@1593948d]" name="checkValidUser" duration-ms="70909" started-at="2017-12-15T09:45:38Z" finished-at="2017-12-15T09:46:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidUser -->
-        <test-method status="PASS" signature="verifyItemHeader()[pri:0, instance:com.delogue.Testcases.VerifyTestCases@1593948d]" name="verifyItemHeader" duration-ms="40850" started-at="2017-12-14T10:22:15Z" depends-on-methods="com.delogue.Testcases.VerifyTestCases.checkValidUser" finished-at="2017-12-14T10:22:56Z">
+        <test-method status="FAIL" signature="verifySize()[pri:0, instance:com.delogue.Testcases.VerifyTestCases@1593948d]" name="verifySize" duration-ms="52277" started-at="2017-12-15T09:46:49Z" depends-on-methods="com.delogue.Testcases.VerifyTestCases.checkValidUser" finished-at="2017-12-15T09:47:41Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 40.10 seconds
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
+System info: host: 'dlgselenium', ip: '10.160.0.2', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2f1c0d56-fae8-4359-949b-278284882f70]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 40.10 seconds
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
+System info: host: 'dlgselenium', ip: '10.160.0.2', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2f1c0d56-fae8-4359-949b-278284882f70
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy5.click(Unknown Source)
+	at com.delogue.pages.ItemSizeOption.editSize(ItemSizeOption.java:74)
+	at com.delogue.Testcases.VerifyTestCases.verifySize(VerifyTestCases.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 16:57:40'
+System info: host: 'dlgselenium', ip: '10.160.0.2', os.name: 'Windows Server 2016', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/shwetap/AppData/Local/Temp/2/anonymous2202380259441615850webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10092)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/shwetap/AppData/Local/Temp/2/anonymous2202380259441615850webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/shwetap/AppData/Local/Temp/2/anonymous2202380259441615850webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/shwetap/AppData/Local/Temp/2/anonymous2202380259441615850webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:625)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyItemHeader -->
+        </test-method> <!-- verifySize -->
       </class> <!-- com.delogue.Testcases.VerifyTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

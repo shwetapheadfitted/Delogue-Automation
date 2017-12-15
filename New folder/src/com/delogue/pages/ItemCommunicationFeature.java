@@ -3,6 +3,8 @@
  */
 package com.delogue.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +15,18 @@ import org.openqa.selenium.support.How;
  *
  */
 public class ItemCommunicationFeature {
+	
+	
+	WebDriver driver;
+	
+	public  ItemCommunicationFeature(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+		
+		this.driver=driver;
+		
+		
+	}
+	
 	@FindBy(how=How.XPATH, using="//a[@href='#itemTabItemDetailsCommunication']")
 	WebElement communication;
 	
@@ -43,14 +57,14 @@ public class ItemCommunicationFeature {
 	@FindBy(how=How.XPATH, using="//*[@id=\"redactor-toolbar-0\"]/li[5]/a")
 	WebElement fontcolor;
 	
-	@FindBy(how=How.XPATH, using="div[@class='redactor-editor redactor-linebreaks']")
-	WebElement textbox;
+	@FindBy(how=How.XPATH, using="//div[@class='redactor-editor redactor-linebreaks redactor-placeholder' or @placeholder='Type your message']")
+	WebElement msgtextbox;
 	
 	@FindBy(how=How.CSS, using="#btnUploadItemCommunicationFile")
 	WebElement attachfile;
 	
 	@FindBy(how=How.CSS,using="#btnItemCommOk")
-	WebDriver okbutton;
+	WebElement okbutton;
 	
 	@FindBy(how=How.CSS,using="#btnItemCommCancel")
 	WebElement cancelbutton;
@@ -72,6 +86,40 @@ public class ItemCommunicationFeature {
 	
 	@FindBy(how=How.CSS,using="#txtItemCommSearch")
 	WebElement search;
+	
+	@FindBy(how=How.XPATH,using="//span[text()='Reply']")
+	WebElement replybutton;
+	
+	//attach file remaining
+
+	public void createmesage(String sub, String msg) throws InterruptedException
+	{
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(11000);
+		communication.click();
+		Thread.sleep(9000);
+		newmessage.click();
+		subject.sendKeys(sub);
+		msgtextbox.sendKeys(msg);
+		okbutton.click();
+		Thread.sleep(6000);
+		replybutton.click();
+	
+	}
+	
+	public void clickOptions() throws InterruptedException
+	{
+		messageschechbox.click();
+		Thread.sleep(3000);
+		messageschechbox.click();
+		
+		//sampledocuments.click();
+		Thread.sleep(4000);
+		logchanges.click();
+		Thread.sleep(6000);
+		price.click();
+	}
+	
 	
 	
 }

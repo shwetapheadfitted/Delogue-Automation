@@ -44,6 +44,10 @@ public class ItemTab {
 	@FindBy(how=How.CSS,using="span.save-icon.pull-right")
 	WebElement savebutton;
 	
+	public void itemclick()
+	{
+		item.click();
+	}
 	public void viewMarkedFileds() throws Exception
 	{
 		Thread.sleep(10000);
@@ -55,7 +59,7 @@ public class ItemTab {
 	
 	public void itemAdd() throws InterruptedException
 	{
-		Thread.sleep(10000);
+		Thread.sleep(12000);
 		item.click();
 		Thread.sleep(9000);
 		additem.click();
@@ -67,9 +71,9 @@ public class ItemTab {
 		Select contactdropdown=new Select(contactperson);
 		contactdropdown.selectByVisibleText("Shweta");
 		
-		itemname.sendKeys("item4567");
+		itemname.sendKeys("item9087");
 		
-		itemnumber.sendKeys("123");
+		itemnumber.sendKeys("122");
 		
 		savebutton.click();
 		
